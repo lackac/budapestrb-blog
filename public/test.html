@@ -3,12 +3,46 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>static test page</title>
+  <title>Teszt oldal</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
-some static content
+<div id="page">
+  <div id="header">
+    <h1>budapest.rb</h1>
+  </div>
+  <div id="main">
+    <div id="post">
+      <h2>Teszt oldal</h2>
+      <p><a href="http://ruby.meetup.hu/test.html#disqus_thread">kommentek</a></p>
+
+      <p>Consequatur est exercitationem explicabo ut officia laudantium sed. Aspernatur tenetur consequatur nostrum perferendis. Architecto aperiam est maxime tempore.</p>
+      <p>Aut voluptatibus veritatis dolorum distinctio fugiat enim. Consequatur quia eveniet ad sit. Repudiandae id id dolores recusandae cupiditate. Nisi asperiores non non incidunt.</p>
+      <p>Voluptas qui iusto et. Praesentium itaque voluptatem ex facilis et. Vel modi et accusamus.</p>
+      <p>Maiores sunt incidunt voluptatibus consequatur omnis. Dicta rerum consequuntur et sint explicabo veritatis veniam dolor. Ut nostrum quo magni qui illum. Fuga voluptatem laudantium laborum qui perspiciatis vitae maxime voluptatum.</p>
+      <p>Velit assumenda dicta et repudiandae asperiores facere unde. Nisi similique et velit veniam. Laudantium nostrum veniam iste. Dolor unde cupiditate et.</p>
+    </div>
+
+    <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/budapest-rb/embed.js"></script><noscript><a href="http://budapest-rb.disqus.com/?url=ref">Kommentek megtekintése.</a></noscript><a href="http://disqus.com" class="dsq-brlink"><span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+  var links = document.getElementsByTagName('a');
+  var query = '?';
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].href.indexOf('#disqus_thread') >= 0) {
+      query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    }
+  }
+  document.write('<script type="text/javascript" src="http://disqus.com/forums/budapest-rb/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
+
 </body>
 </html>
