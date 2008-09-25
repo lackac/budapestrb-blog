@@ -13,10 +13,29 @@ class DeployApp
 
     payload = JSON.parse(@req.POST["payload"])
 
-    FileUtils.touch(SEMAFOR)
-    deploy
-    FileUtils.rm(SEMAFOR)
-    @res.write "Deploying in progress, check back later"
+    if do_deploy?(payload)
+      FileUtils.touch(SEMAFOR)
+      deploy
+      FileUtils.rm(SEMAFOR)
+      @res.write "Deployment in progress, check back later"
+    else
+      @res.write "Not deploying"
+    end
+  end
+
+  # Checks commit messages to determine if we are to deploy
+  def do_deploy?(payload)
+    return false unless payload['commits'] and not (commits = Array(payload['commits'])).empty?
+    commits.inject(false) do |choice, commit|
+      case commit['message']
+      when /:don'?t[ _-]deploy:/i
+        false
+      when /:deploy:/i
+        true
+      else
+        choice
+      end
+    end
   end
 
   # Is it a correct request and aren't we deploying already
