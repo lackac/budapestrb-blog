@@ -25,23 +25,24 @@ filter:    erb
 
 <div class="container">
 
-   <div class="column span-20 prepend-2 append-2 first last" id="header">
+   <div class="column span-20 first last" id="header">
      <p class="title">budapest.rb</p>
-     <hr>
    </div>
 
-   <div class="column span-15 prepend-2 first">
-      <%= @content %>
+   <div class="column span-15 first" id="content">
+     <div class="inner">
+       <%= @content %>
+     </div>
    </div>
 
-   <div class="column span-5 append-2 last">
-      <h4>Hírek</h4>
-      <p>Majd, ha rájövünk, hogy hogyan kell ilyet generáltatni a
-      <i>géppel</i></p>
+   <div class="column span-5 last" id="sidebar">
+     <div class="inner">
+       <h4>Hírek</h4>
+       <p>Majd, ha rájövünk, hogy hogyan kell ilyet generáltatni a <i>géppel</i>.</p>
+     </div>
    </div>
 
-   <div class="column span-20 prepend-2 append-2 first last" id="footer">
-     <hr />
+   <div class="column span-20 first last" id="footer">
      <p>Ezeket az oldalakat a mágikus <a href="http://webby.rubyforge.org">Webby</a> készítette.</p>
    </div>
 

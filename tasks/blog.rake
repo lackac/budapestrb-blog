@@ -6,10 +6,10 @@ namespace :blog do
   FileList["#{Webby.site.template_dir}/blog/*"].each do |template|
     next unless test(?f, template)
     name = template.pathmap('%n')
-    next if name =~ %r/^(month|year)$/  # skip month/year blog entries
+    next if name =~ %r/^(day|month|year)$/  # skip day/month/year blog entries
 
     desc "Create a new blog #{name}"
-    task name => [:create_year_index, :create_month_index] do |t|
+    task name => [:create_all_index, :create_year_index, :create_month_index, :create_day_index] do |t|
       page, title, dir = Webby::Builder.new_page_info
 
       # if no directory was given use the default blog directory (underneath
@@ -23,6 +23,25 @@ namespace :blog do
       exec(::Webby.editor, page) unless ::Webby.editor.nil?
     end
   end  # each
+
+  # this task is used to create the index for all the blogs (blog/index.txt)
+  task :create_all_index do |t|
+    # parse out information about the page to create
+    _, _, dir = Webby::Builder.new_page_info
+
+    # if no directory was given use the default blog directory (underneath
+    # the content directory)
+    dir = Webby.site.blog_dir if dir.empty?
+
+    # determine the filename and template name
+    fn = File.join(dir, 'index.txt')
+    tmpl = Dir.glob(File.join(Webby.site.template_dir, 'blog/all.*')).first.to_s
+
+    if test(?f, tmpl) and not test(?f, File.join(Webby.site.content_dir, fn))
+      Webby::Builder.create(fn, :from => tmpl,
+          :locals => {:title => 'budapest.rb blogs', :directory => dir})
+    end
+  end
 
   # this task is used to create the year index file (blog/2008/index.txt)
   task :create_year_index do |t|
@@ -49,7 +68,7 @@ namespace :blog do
   task :create_month_index do |t|
     # parse out information about the page to create
     _, _, dir = Webby::Builder.new_page_info
-    now = Time.now
+    now   = Time.now
     month = now.strftime '%m'
 
     # if no directory was given use the default blog directory (underneath
@@ -63,7 +82,29 @@ namespace :blog do
 
     if test(?f, tmpl) and not test(?f, File.join(Webby.site.content_dir, fn))
       Webby::Builder.create(fn, :from => tmpl,
-          :locals => {:title => month, :directory => dir})
+          :locals => {:title => now.strftime('%Y.%m'), :directory => dir})
+    end
+  end
+
+  # this task is used to create the day index file (blog/2008/04/03/index.txt)
+  task :create_day_index do |t|
+    # parse out information about the page to create
+    _, _, dir = Webby::Builder.new_page_info
+    now   = Time.now
+    day   = now.strftime '%d'
+
+    # if no directory was given use the default blog directory (underneath
+    # the content directory)
+    dir = Webby.site.blog_dir if dir.empty?
+    dir = File.join(dir, now.strftime('%Y/%m/%d'))
+
+    # determine the filename and template name
+    fn = File.join(dir, 'index.txt')
+    tmpl = Dir.glob(File.join(Webby.site.template_dir, 'blog/day.*')).first.to_s
+
+    if test(?f, tmpl) and not test(?f, File.join(Webby.site.content_dir, fn))
+      Webby::Builder.create(fn, :from => tmpl,
+          :locals => {:title => now.strftime('%Y-%m-%d'), :directory => dir})
     end
   end
 

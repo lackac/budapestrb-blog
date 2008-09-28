@@ -55,7 +55,7 @@ class DeployApp
 
   # The actual deploy
   def deploy
-    %x{cd #{DEPLOY_DIR} && git pull > /dev/null && touch tmp/restart.txt}
+    %x{cd #{DEPLOY_DIR} && git pull > /dev/null && webby && touch tmp/restart.txt}
   end
 
 
