@@ -1,0 +1,49 @@
+---
+title:     budapest.rb Atom Feed
+subtitle:  Mindenféle hasznos dolgok a ruby meetupról.
+site:      ruby.meetup.hu
+author:    budapest.rb szervezők
+email:     ruby@meetup.hu
+extension: xml
+layout:    nil
+dirty:     true
+filter:    erb
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><%= h(@page.title) %></title>
+  <subtitle><%= h(@page.subtitle) %></subtitle>
+  <link href="http://<%= @page.site %>//" rel="self" />
+  <link href="http://<%= @page.site %>/" />
+  <updated><%= Time.now.xmlschema %></updated>
+  <author>
+    <name><%= h(@page.author) %></name>
+    <email><%= h(@page.email) %></email>
+  </author>
+  <id>http://<%= @page.site %>/</id>
+<% @pages.find(:all, :in_directory => 'blog', :recursive => true,
+                 :sort_by => 'created_at', :reverse => true) \
+           .select {|p| p.path !~ /\/index\.txt$/} \
+           .first(15).each do |article|
+    next if article == @page
+-%>
+  <entry>
+    <title><%= h(article.title) %></title>
+    <link href="<%= article.url %>" />
+    <id>tag:<%= @page.site %>,<%= article.created_at.strftime('%Y-%m-%d') %>:<%= article.created_at.to_i %></id>
+    <updated><%= article.created_at.xmlschema %></updated>
+<%  if @page.author -%>
+    <author>
+      <name><%= h(@page.author) %></name>
+<%    if @page.author_uri -%>
+      <uri><% h(@page.author_uri) %></uri>
+<%    end -%>
+<%    if @page.author_email -%>
+      <email><% h(@page.author_uri) %></email>
+<%    end -%>
+    </author>
+<%  end -%>
+    <content type="html"><%= h(render(article)) %></content>
+  </entry>
+<% end -%>
+</feed>
