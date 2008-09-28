@@ -26,6 +26,23 @@ body {
  * --------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6 { color: <%= @page.color['header'] %>; border-bottom: 1px solid <%= @page.color['border'] %>; }
 
+#header h1 {
+  background: transparent url(/images/logo.gif) bottom left no-repeat;
+  border-bottom-width: 0;
+  width: 162px;
+  height: 108px;
+}
+#header h1 a {
+  display: block;
+  text-indent: -5000px;
+  width: 162px;
+  height: 108px;
+}
+#header h2 {
+  margin-top: 36px;
+  border-bottom-width: 0;
+}
+
 /* Text Elements
  * --------------------------------------------------------------------- */
 a                 { color: <%= @page.color['link'] %>; }

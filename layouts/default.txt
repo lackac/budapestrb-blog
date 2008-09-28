@@ -28,7 +28,12 @@ filter:    erb
 <div class="container">
 
   <div class="column span-20 first last" id="header">
-    <p class="title">budapest.rb</p>
+    <div class="column span-5">
+      <h1><a href="/" title="budapest.rb home page">budapest.rb</a></h1>
+    </div>
+    <div class="column span-15 last">
+      <h2>Magyar Ruby Meetup</h2>
+    </div>
   </div>
 
   <div class="column span-15 first" id="content">
