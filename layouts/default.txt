@@ -46,7 +46,7 @@ filter:    erb
           <% if @page.author %>
           <span class="vcard">by <%= @page.author_uri ? %{<a href="#{@page.author_uri}" class="url fn">#{@page.author}</a>} : %{<span class="fn">@page.author</span>} %></span>
           <% end %>
-          <span class="date"><%= @page.created_at.strftime('%Y-%m-%d %H:%M') %></span>
+          <span class="date"><%= @page.created_at.strftime('%Y-%m-%d %H:%M') %></span><%= %{, <a href="http://ruby.meetup.hu#{@page.url}#disqus_thread" class="comments">kommentek</a>} unless @page.no_comment %>
         </span>
       </h1>
       <% end %>
