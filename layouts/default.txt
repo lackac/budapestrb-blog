@@ -1,4 +1,5 @@
 ---
+title: Magyar Ruby Meetup
 extension: html
 filter:    erb
 ---
@@ -8,7 +9,7 @@ filter:    erb
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu-hu">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title><%= @page.title %></title>
+  <title><%= @page.title %> - budapest.rb</title>
   <meta name="author" content="Bácsi László, Golda Bence" />
 
   <!--- Blueprint CSS Framework -->
@@ -38,9 +39,12 @@ filter:    erb
 
   <div class="column span-15 first" id="content">
     <div class="inner">
+      <% if @page.blog_post %>
+      <h2><%= @page.title %></h2>
+      <% end %>
       <%= @content %>
 
-      <%= comment_thread unless @page.no_comment or @page.path =~ /\/index\.txt$/ %>
+      <%= comment_thread if @page.blog_post and not @page.no_comment %>
     </div>
   </div>
 
