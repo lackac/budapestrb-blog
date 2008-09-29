@@ -21,7 +21,7 @@ filter:    erb
   <!-- Homepage CSS -->
   <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
 
-  <link href="/atom.xml" rel="alternate" title="Legfrissebb bejegyzések" type="application/atom+xml" />
+  <link href="http://feeds.feedburner.com/budapestrb" rel="alternate" title="Legfrissebb bejegyzések" type="application/atom+xml" />
 </head>
 <body>
 
@@ -39,6 +39,8 @@ filter:    erb
   <div class="column span-15 first" id="content">
     <div class="inner">
       <%= @content %>
+
+      <%= comment_thread unless @page.no_comment or @page.path =~ /\/index\.txt$/ %>
     </div>
   </div>
 
@@ -62,5 +64,6 @@ filter:    erb
 </div>
 
 <%= comment_counter %>
+<%= render :partial => '/analytics' %>
 </body>
 </html>
