@@ -6,7 +6,7 @@ namespace :blog do
   FileList["#{Webby.site.template_dir}/blog/*"].each do |template|
     next unless test(?f, template)
     name = template.pathmap('%n')
-    next if name =~ %r/^(day|month|year)$/  # skip day/month/year blog entries
+    next if name =~ %r/^(all|day|month|year)$/  # skip day/month/year blog entries
 
     desc "Create a new blog #{name}"
     task name => [:create_all_index, :create_year_index, :create_month_index, :create_day_index] do |t|
