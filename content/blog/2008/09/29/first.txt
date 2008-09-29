@@ -1,0 +1,31 @@
+--- 
+title:      Első
+created_at: 2008-09-29 21:44:19.182943 +02:00
+blog_post:  true
+author:     LacKac
+author_uri: http://lackac.hu
+filter:
+  - markdown
+---
+Szűk két héttel az [első budapest.rb][1] találkozó után végre a blogunk is elkészült. A tervünk az, hogy ide írunk majd mindenfélét szervezéssel kapcsolatban, illetve ide kerülnek majd fel az előadások anyagai is (videó, pdf, kód). Egy következő bejegyzésban hamarosan közzé tesszük az első alkalom tartalmait. Illetve lesz szó a soron következő események szervezéséről, tervezett témákról, részletekről.
+
+[1]: http://ruby.meetup.com/139/calendar/8639728/
+
+Szeretnénk minél transzparensebbé tenni a szervezést is, illetve várjuk mindenféle javaslataitokat. Kommenteljetek, vagy írjatok emailt (domain név első pont helyett kukaccal ;)). Természetesen továbbra is, és folyamatosan **várunk jelentkezőket előadónak**. A következő alkalom már alakul (erről majd később), de szeretnénk betárazni témákból és előadókból, úgyhogy jelentkezzetek (vagy ajánljatok másokat). Ezeket ha lehet, inkább az email címünkre küldjétek.
+
+Tehát a lényeg: rakjátok [rss olvasóba][2] a blogot, kommenteljetek, és jelentkezzetek előadónak.
+
+[2]: http://feeds.feedburner.com/budapestrb
+
+### Mi forog a gépezet mögött
+
+Technológia és Ruby iránt fogékony társaság vagytok, így pár szóban megemlítjük, hogy mi tartja össze ezt a blogot. Tényleg csak pár szó, bővebben majd talán egy 5 perces előadás keretében. Abc rendben: [disqus][], [git][], [github][], [passenger][], [ubuntu][], [webby][].
+
+[disqus]: http://disqus.com/
+[git]: http://github.com/
+[github]: http://github.com/
+[passenger]: http://www.modrails.com/
+[ubuntu]: http://www.ubuntu.com/
+[webby]: http://webby.rubyforge.org/
+
+_a szervezők_
