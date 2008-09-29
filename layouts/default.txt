@@ -40,12 +40,15 @@ filter:    erb
   <div class="column span-15 first" id="content">
     <div class="inner">
       <% if @page.blog_post %>
-      <h2>
+      <h1>
         <%= @page.title %>
-        <% if @page.author %>
-        <span class="vcard">by <%= @page.author_uri ? %{<a href="#{@page.author_uri}" class="url fn">#{@page.author}</a>} : %{<span class="fn">@page.author</span>} %></span>
-        <% end %>
-      </h2>
+        <span class="meta">
+          <% if @page.author %>
+          <span class="vcard">by <%= @page.author_uri ? %{<a href="#{@page.author_uri}" class="url fn">#{@page.author}</a>} : %{<span class="fn">@page.author</span>} %></span>
+          <% end %>
+          <span class="date"><%= @page.created_at.strftime('%Y-%m-%d %H:%M') %></span>
+        </span>
+      </h1>
       <% end %>
       <%= @content %>
 

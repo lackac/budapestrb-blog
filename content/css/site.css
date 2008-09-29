@@ -65,9 +65,12 @@ img.inline {
   border: 0;
 }
 
-h2 span.vcard {
-  font-size: 0.5em;
+h1 span.meta {
+  float: right;
+  margin-top: 1px;
+  font-size: 0.33em;
   font-weight: normal;
+  color: <%= @page.color['quiet'] %>;
 }
 
 #header h1 {
