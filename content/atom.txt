@@ -21,7 +21,7 @@ filter:    erb
     <email><%= h(@page.email) %></email>
   </author>
   <id>http://<%= @page.site %>/</id>
-<% @pages.find(:all, :recursive => true,
+<% @pages.find(:all, :in_directory => '', :recursive => true,
                :sort_by => 'created_at', :reverse => true) \
          .select {|p| p.blog_post} \
          .first(15).each do |article|
