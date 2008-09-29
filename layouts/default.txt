@@ -40,7 +40,12 @@ filter:    erb
   <div class="column span-15 first" id="content">
     <div class="inner">
       <% if @page.blog_post %>
-      <h2><%= @page.title %></h2>
+      <h2>
+        <%= @page.title %>
+        <% if @page.author %>
+        <span class="vcard">by <%= @page.author_uri ? %{<a href="#{@page.author_uri}" class="url fn">#{@page.author}</a>} : %{<span class="fn">@page.author</span>} %></span>
+        <% end %>
+      </h2>
       <% end %>
       <%= @content %>
 
@@ -48,22 +53,20 @@ filter:    erb
     </div>
   </div>
 
-  <% articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true, :sort_by => "created_at", :reverse => true, :blog_post => true)[0...10] -%>
+  <% articles = @pages.find(:all, :in_directory => '', :recursive => true, :sort_by => "created_at", :reverse => true, :blog_post => true).first(10) -%>
   <div class="column span-5 last" id="sidebar">
     <div class="inner">
+      <div id="feed_sidebar">
+        <h4>ObjectSpace.each</h4>
+        <p class="large"><a href="http://feeds.feedburner.com/budapestrb"><img src="/images/feed.png" alt="atom feed" class="top"/>Feed</a></p>
+      </div>
+
       <div id="news_sidebar">
-        <h4>Hírek</h4>
+        <h4>posts.last(10)</h4>
         <ul>
           <% articles.each do |page| -%>
           <li><%= link_to_page(page) %> <span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></li>
           <% end %>
-        </ul>
-      </div>
-
-      <div id="social_sidebar">
-        <h4>ObjectSpace.each</h4>
-        <ul>
-          <li><a href="http://feeds.feedburner.com/budapestrb">feedburner</a></li>
         </ul>
       </div>
 
@@ -75,7 +78,8 @@ filter:    erb
 
   <div class="column span-20 first last" id="footer">
     <div class="inner">
-      <p>Ezeket az oldalakat a mágikus <a href="http://webby.rubyforge.org">Webby</a> készítette.</p>
+      A blog tartalma <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/hu/"><img alt="Creative Commons License" class="inline" src="http://i.creativecommons.org/l/by-nc-nd/2.5/hu/80x15.png"/></a> licenc feltételeinek megfelelően szabadon felhasználható.<br/>
+      Ezeket az oldalakat a mágikus <a href="http://webby.rubyforge.org">webby</a> készítette <a href="http://github.com/lackac/budapestrb-blog/tree/master">egy github</a> repo alapján.
     </div>
   </div>
 

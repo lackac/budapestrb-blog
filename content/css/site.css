@@ -26,23 +26,6 @@ body {
  * --------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6 { color: <%= @page.color['header'] %>; border-bottom: 1px solid <%= @page.color['border'] %>; }
 
-#header h1 {
-  background: transparent url(/images/logo.gif) bottom left no-repeat;
-  border-bottom-width: 0;
-  width: 162px;
-  height: 108px;
-}
-#header h1 a {
-  display: block;
-  text-indent: -5000px;
-  width: 162px;
-  height: 108px;
-}
-#header h2 {
-  margin-top: 36px;
-  border-bottom-width: 0;
-}
-
 /* Text Elements
  * --------------------------------------------------------------------- */
 a                 { color: <%= @page.color['link'] %>; }
@@ -76,21 +59,56 @@ div.container { width: 790px; }
 p.quiet { color: <%= @page.color['quiet'] %>; }
 .alt    { color: <%= @page.color['alt'] %>; }
 
-p.title {
-  color: #111;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+img.inline {
+  float: none;
+  margin: 0;
+  border: 0;
 }
 
-#header p.title { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 span.vcard {
+  font-size: 0.5em;
+  font-weight: normal;
+}
 
-#content div.inner { background: <%= @page.color['content-bg'] %>; border: 1px solid <%= @page.color['border'] %>; padding: 1em; }
-#sidebar div.inner { padding: 1em; }
+#header h1 {
+  background: transparent url(/images/logo.gif) bottom left no-repeat;
+  border-bottom-width: 0;
+  width: 162px;
+  height: 108px;
+}
+#header h1 a {
+  display: block;
+  text-indent: -5000px;
+  width: 162px;
+  height: 108px;
+}
+#header h2 {
+  margin-top: 36px;
+  border-bottom-width: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-.article h1 a { text-decoration: none; }
-.article span.date { font-size: 50%; margin-left: 1em; }
+#content div.inner {
+  background: <%= @page.color['content-bg'] %>;
+  border: 1px solid <%= @page.color['border'] %>;
+  padding: 1em;
+}
+#sidebar div.inner {
+  padding: 1em;
+}
 
-#footer div.inner { padding-top: 1em; }
+.article h1 a {
+  text-decoration: none;
+}
+.article span.date {
+  font-size: 50%; margin-left: 1em;
+}
+
+#footer div.inner {
+  margin-top: 1.5em;
+  border-top: 1px solid <%= @page.color['border'] %>;
+  padding: 0.5em;
+  text-align: center;
+}
 
 /* EOF */
