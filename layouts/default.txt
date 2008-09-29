@@ -48,11 +48,23 @@ filter:    erb
     </div>
   </div>
 
+  <% articles = @pages.find(:all, :in_directory => @page.dir, :recursive => true, :sort_by => "created_at", :reverse => true, :blog_post => true)[0...10] -%>
   <div class="column span-5 last" id="sidebar">
     <div class="inner">
       <div id="news_sidebar">
         <h4>Hírek</h4>
-        <p>Majd, ha rájövünk, hogy hogyan kell ilyet generáltatni a <i>géppel</i>.</p>
+        <ul>
+          <% articles.each do |page| -%>
+          <li><%= link_to_page(page) %> <span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div id="social_sidebar">
+        <h4>ObjectSpace.each</h4>
+        <ul>
+          <li><a href="http://feeds.feedburner.com/budapestrb">feedburner</a></li>
+        </ul>
       </div>
 
       <div id="next_meetup_sidebar">
@@ -62,7 +74,9 @@ filter:    erb
   </div>
 
   <div class="column span-20 first last" id="footer">
-    <p>Ezeket az oldalakat a mágikus <a href="http://webby.rubyforge.org">Webby</a> készítette.</p>
+    <div class="inner">
+      <p>Ezeket az oldalakat a mágikus <a href="http://webby.rubyforge.org">Webby</a> készítette.</p>
+    </div>
   </div>
 
 </div>
