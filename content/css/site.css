@@ -91,4 +91,6 @@ p.title {
 .article h1 a { text-decoration: none; }
 .article span.date { font-size: 50%; margin-left: 1em; }
 
+#footer div.inner { padding-top: 1em; }
+
 /* EOF */
