@@ -21,10 +21,10 @@ filter:    erb
     <email><%= h(@page.email) %></email>
   </author>
   <id>http://<%= @page.site %>/</id>
-<% @pages.find(:all, :in_directory => 'blog', :recursive => true,
-                 :sort_by => 'created_at', :reverse => true) \
-           .select {|p| p.path !~ /\/index\.txt$/} \
-           .first(15).each do |article|
+<% @pages.find(:all, :recursive => true,
+               :sort_by => 'created_at', :reverse => true) \
+         .select {|p| p.blog_post} \
+         .first(15).each do |article|
     next if article == @page
 -%>
   <entry>
