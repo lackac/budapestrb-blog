@@ -11,10 +11,19 @@ dirty:      true
   paginate(articles, 10) do |page|
 -%>
 <div class="article">
-  <h1><%= link_to_page(page) %><span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></h1>
+  <h1>
+    <%= link_to_page(page) %>
+    <span class="meta">
+      <% if page.author %>
+      <span class="vcard">by <%= page.author_uri ? %{<a href="#{page.author_uri}" class="url fn">#{page.author}</a>} : %{<span class="fn">page.author</span>} %></span>
+      <% end %>
+      <span class="date"><%= page.created_at.strftime('%Y-%m-%d %H:%M') %></span><%= %{, <a href="http://ruby.meetup.hu#{page.url}#disqus_thread" class="comments">kommentek</a>} unless page.no_comment %>
+    </span>
+  </h1>
 
   <div class="body">
     <%= render(page) %>
+    <a href="<%= url_for(page) %>" title="<%= h(page.title) %>">tovább »</a>
   </div>
 </div>
 <% end -%>

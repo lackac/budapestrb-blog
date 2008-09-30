@@ -72,6 +72,15 @@ h1 span.meta {
   font-weight: normal;
   color: <%= @page.color['quiet'] %>;
 }
+h1 a {
+  text-decoration: none;
+}
+.article span.date {
+  font-size: 50%; margin-left: 1em;
+}
+h1 span.meta span.date {
+  font-size: 100%; margin-left: 0;
+}
 
 #header h1 {
   background: transparent url(/images/logo.gif) bottom left no-repeat;
@@ -98,13 +107,6 @@ h1 span.meta {
 }
 #sidebar div.inner {
   padding: 1em;
-}
-
-.article h1 a {
-  text-decoration: none;
-}
-.article span.date {
-  font-size: 50%; margin-left: 1em;
 }
 
 #footer div.inner {
