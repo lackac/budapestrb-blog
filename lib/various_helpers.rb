@@ -1,4 +1,12 @@
 module VariousHelpers
+  def sytlesheet_link path, media = 'screen, projection'
+    path = '/' + path if path[0] != ?/
+    path = '/css' + path unless path =~ /^\/css/
+    path += '.css' unless path =~ /\.css$/
+    mtime = File.mtime(File.join(File.dirname(__FILE__), '..', 'content', path)).to_i
+    %{<link rel="stylesheet" href="#{path}?#{mtime}" type="text/css" media="#{media}" />}
+  end
+
   def flickr_slideshow url
     %{
 <div class="embed flickr-slideshow">
