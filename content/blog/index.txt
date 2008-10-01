@@ -25,5 +25,6 @@ dirty:      true
     <%= render(page) %>
     <a href="<%= url_for(page) %>" title="<%= h(page.title) %>">tovább »</a>
   </div>
+  <hr/>
 </div>
 <% end -%>

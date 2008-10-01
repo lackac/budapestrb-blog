@@ -59,6 +59,10 @@ div.container { width: 790px; }
 p.quiet { color: <%= @page.color['quiet'] %>; }
 .alt    { color: <%= @page.color['alt'] %>; }
 
+div.body {
+  margin-bottom: 2em;
+}
+
 img.inline {
   float: none;
   margin: 0;
@@ -80,6 +84,14 @@ h1 a {
 }
 h1 span.meta span.date {
   font-size: 100%; margin-left: 0;
+}
+
+.embed {
+  text-align: center;
+}
+.embed- object {
+  margin: 0 auto;
+  text-align: left;
 }
 
 #header h1 {
