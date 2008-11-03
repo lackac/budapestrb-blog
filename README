@@ -1,3 +1,27 @@
-This is the *budapest.rb* blog with Webby.
+This is the "budapest.rb":http://ruby.meetup.hu blog with Webby. 
 
-Bence can edit too... :)
+h2. Webby
+
+bq. *Webby* is a fantastic little website management system. It would be called a content management system if it were a bigger kid. But, it’s just a runt with a special knack for transforming text. And that’s really all it does – manages the legwork of turning text into something else, an *ASCII Alchemist* if you will.
+
+We use "Webby":http://webby.rubyforge.org/ to build our blog. It has everything we need and it's lightning fast since it's just a bunch of static html files when built. For commenting and including special stuff in our blog posts we wrote some useful helpers which you can find in the lib directory. Some of these might be specific to our blog so be sure to check them before using in your own site.
+
+h2. Git
+
+You must know something about "git":http://git.or.cz/ if you're reading this. It's a distributed version control system and a realy great one too. GitHub is a place where we can host our repository. We use git because it best suits our needs and use GitHub because it has a great set of features, it's free for open source stuff and it supports post receive hooks.
+
+h2. Deployment
+
+We have a simple deploy script as a Rake application in @deploy_app.rb@. This is set up for Passenger in @config.ru@ and the public url is set up in our GitHub repository as a Post-Receive URL. So if we include the ':deploy:' string in one of our commits and then push to GitHub then the deploy script will receive the commit infos and decide to build the site and restart the server. Nice, huh?
+
+h2. Usage
+
+# fork the repository
+# read about Webby (here's a "great tutorial":http://www.clarkware.com/cgi/blosxom/2008/08/06#Webby)
+# delete our content and layout and stuff you don't need
+# create your webby layout and content and stuff
+# set up your webserver and deploy first manually
+# ?
+# profit
+
+And send a pull request if you improve this setup with other useful things.
