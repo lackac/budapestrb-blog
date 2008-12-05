@@ -15,9 +15,7 @@ Az első alkalom szerintünk nagyon jó volt, de persze *ti majd megmondjátok a
 
 Azon gondolkoztunk, hogy majd az első alkalom után mindent jól kielemezünk, többek közt a meetup oldalon található megjegyzéseitek alapján. Meetup után mindenki kap egy ilyen emailt, amit követve minden panaszát és örömét elmondhatja. Pár dolgot már ebből is le tudtunk szűrni, de végül úgy döntöttünk, hogy még kísérletezünk egy kicsit, aztán meglátjuk mi lesz.
 
-Most pedig a lényegről. Már korábban felkerültek képek az első meetupról (utólag is bocsánat a vakuzásért, az én ötletem volt). Ezek például [az esemény oldalán](http://ruby.meetup.com/139/calendar/8639728/) megnézhetőek, vagy itt egy flickr slideshow:
-
-<%= flickr_slideshow 'http://www.flickr.com/photos/lackac/sets/72157607359581658/show/' %>
+Most pedig a lényegről. Már korábban felkerültek képek az első meetupról (utólag is bocsánat a vakuzásért, az én ötletem volt). Ezek [az esemény oldalán](http://ruby.meetup.com/139/calendar/8639728/) megnézhetőek.
 
 Végül itt vannak az előadások pdf-ben és Google Videon. Sajnos a felvételek nem sikerültek túl jól (kicsit halk és nagyon sötét). Ebben is fejlődünk még.
 
