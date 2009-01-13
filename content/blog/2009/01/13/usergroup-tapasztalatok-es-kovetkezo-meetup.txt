@@ -45,4 +45,4 @@ Bencével úgy gondoltuk, hogy visszatérünk az előadásos rendszerhez. Szeret
 
 Helyként a jelenlegi Newtech Meetup helyszín Bem Mozit szemeltük ki. A Newtechnek kicsit kicsi volt, nekünk kényelmes lesz. Van sörözője, ahova az előadások után be tudunk ülni. Még szervezés alatt áll, hogy oda tudjunk menni, írunk róla, ha lesz végleges helyszín.
 
-A két januári téma a *Merb bemutatása* és a *???*. Időpont *január 22. (jövő hét csütörtök) 19.00*.
+A januári két témánk már meg is van, de a bejelentés holnapra várható (pár apró dolgot még tisztázni kell). Időpont *január 22. (jövő hét csütörtök) 19.00*.
