@@ -26,6 +26,14 @@ module DisqusHelpers
 </script>
     }
   end
+
+  def user_voice_widget
+    %{<script src="http://bprb.uservoice.com/pages/general/widgets/tab.js?alignment=right&amp;color=FFFFFF" type="text/javascript"></script>}
+  end
+
+  def user_voice_top_ideas
+    %{<script src="http://bprb.uservoice.com/pages/general/widgets/top3.js" type="text/javascript"></script>}
+  end
 end
 
 Webby::Helpers.register(DisqusHelpers)

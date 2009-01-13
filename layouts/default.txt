@@ -56,7 +56,7 @@ filter:    erb
     </div>
   </div>
 
-  <% articles = @pages.find(:all, :in_directory => '', :recursive => true, :sort_by => "created_at", :reverse => true, :blog_post => true).first(10) -%>
+  <% articles = @pages.find(:all, :in_directory => '', :recursive => true, :sort_by => "created_at", :reverse => true, :blog_post => true).first(5) -%>
   <div class="column span-5 last" id="sidebar">
     <div class="inner">
       <div id="feed_sidebar">
@@ -65,7 +65,7 @@ filter:    erb
       </div>
 
       <div id="news_sidebar">
-        <h4>posts.last(10)</h4>
+        <h4>posts.last(5)</h4>
         <ul>
           <% articles.each do |page| -%>
           <li><%= link_to_page(page) %> <span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></li>
@@ -75,6 +75,10 @@ filter:    erb
 
       <div id="next_meetup_sidebar">
         <embed  src="http://www.meetup.com/swf/membership_badge.swf?chapterid=1271139" width="166" height="110" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+      </div>
+
+      <div id="user_voice_sidebar">
+        <%= user_voice_top_ideas %>
       </div>
     </div>
   </div>
@@ -89,6 +93,7 @@ filter:    erb
 </div>
 
 <%= comment_counter %>
+<%= user_voice_widget %>
 <%= render :partial => '/analytics' %>
 </body>
 </html>
