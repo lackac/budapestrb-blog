@@ -6,6 +6,8 @@ class DeployApp
   DEPLOY_DIR = File.expand_path(File.dirname(__FILE__))
   SEMAFOR = File.join(DEPLOY_DIR, ".deploying")
 
+  DEBUG = true
+
   # Does what it says on the tin. By default, not much, it just prints the
   # received payload.
   def handle_request
@@ -14,18 +16,23 @@ class DeployApp
     payload = JSON.parse(@req.POST["payload"])
 
     if do_deploy?(payload)
+      debug "decided to deploy"
       FileUtils.touch(SEMAFOR)
       deploy
       FileUtils.rm(SEMAFOR)
       @res.write "Deployment in progress, check back later"
     else
+      debug "decided not to deploy"
       @res.write "Not deploying"
     end
   end
 
   # Checks commit messages to determine if we are to deploy
   def do_deploy?(payload)
-    return false unless payload['commits'] and not (commits = Array(payload['commits'])).empty?
+    unless payload['commits'] and not (commits = Array(payload['commits'])).empty?
+      debug "not a GitHub payload"
+      return false
+    end
     commits.inject(false) do |choice, commit|
       case commit['message']
       when /:don'?t[ _-]deploy:/i
@@ -41,12 +48,13 @@ class DeployApp
   # Is it a correct request and aren't we deploying already
   def request_is_ok?
     if @req.POST["payload"].nil?
+      debug "no payload"
       false
     elsif @req.path_info != '/deploy'
-      puts "DeployApp: POST with payload but not to '/deploy'"
+      debug "POST with payload but not to '/deploy'"
       false
     elsif File.exists?(SEMAFOR)
-      puts "DeployApp: Another deploy already in progress"
+      debug "another deploy already in progress"
       false
     else
       true
@@ -55,7 +63,9 @@ class DeployApp
 
   # The actual deploy
   def deploy
-    %x{cd #{DEPLOY_DIR} && git pull > /dev/null && webby && touch tmp/restart.txt}
+    cmd = %{cd #{DEPLOY_DIR} && git pull > /dev/null && webby && touch tmp/restart.txt}
+    debug "running: #{cmd}"
+    system(cmd)
   end
 
 
@@ -71,5 +81,10 @@ class DeployApp
     @res = Rack::Response.new
     handle_request
     @res.finish
+  end
+
+  # Output debug infos
+  def debug(msg)
+    puts "DeployApp: #{msg}" if DEBUG
   end
 end
