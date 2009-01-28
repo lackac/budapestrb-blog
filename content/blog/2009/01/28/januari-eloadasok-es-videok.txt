@@ -24,6 +24,6 @@ A januári alkalom szerintünk a körülményeket leszámítva nagyon jól siker
 
 ### Golda Bence ([Bit and Pixel](http://www.bitandpixel.hu/)): Sinatra
 
-> Az előadás célja a Ruby webes keretrendszerek egyik legkisebb, legrugalmasabb változatának bemutatása, illetve egy demó keretében a használatának prezentálása. Szó lesz még adatbáziskezelők illesztéséről, megjelenítésről (haml+sass, erb) és arról, hogy hogyan élesíthetjük elkészült alkalmazásainkat. (PDF hamarosan)
+> Az előadás célja a Ruby webes keretrendszerek egyik legkisebb, legrugalmasabb változatának bemutatása, illetve egy demó keretében a használatának prezentálása. Szó lesz még adatbáziskezelők illesztéséről, megjelenítésről (haml+sass, erb) és arról, hogy hogyan élesíthetjük elkészült alkalmazásainkat. [PDF](http://files.meetup.com/1271139/09-01-22-golda_bence-sinatra.pdf) [Demo projekt](http://github.com/gbence/sinatra-gitcast/tree/master)
 
 <%= google_video '2671758003794286530' %>
