@@ -1,6 +1,6 @@
 --- 
 title:      Első nem saját UserVoice javaslat
-created_at: 2009-03-11 09:58:42.162259 +01:00
+created_at: 2009-03-12 12:00:00.0 +01:00
 blog_post:  true
 author:     LacKac
 author_uri: http://lackac.hu
@@ -22,10 +22,10 @@ A *Haml-ről és Sass-ről* már többször szó esett, de inkább csak kitérő
 
 A *JRuby* egy másik olyan téma, amiről már sokszor szó esett. Nekem is és másoknak is vannak tapasztalataink vele. Virgóban vannak JRuby-val üzemeltett projektjeink, aminek a deploymentjét csak nemrég sikerült megfelelően automatizálnunk. Mélyebb beszámolóra még nem vállalkozott senki. Saját tapasztalatainkból össze tudnánk rakni valamit, de őszintén szólva a JRuby minden héten meglep valami furcsasággal, ami elveszi az önbizalmam. Törődést igénylő jószág, na.
 
-Végül *deployment megoldások*. Erről nagyon sokat lehetne beszélni. Capistrano, Mongrel, NginX, Apache, Phusion Passenger, Memcached, Tomcat, MRI, Ruby1.9, JRuby. Csakhogy néhány érinthető témakört említsek. Ez talán fontosabb és érdekesebb téma, mint a JRuby, illetve a JRuby-nál előbb elő kellene kerüljön. Tudjuk, hogy vannak magyar Rubys projektek, élesben futó weboldalak. Biztos üzemelnek valamitől... Gyertek elő és meséljetek magatokról. Hogy csináljátok?
+Végül *deployment megoldások*. Erről nagyon sokat lehetne beszélni. Capistrano, Mongrel, NginX, Apache, Phusion Passenger, Memcached, Tomcat, MRI, Ruby1.9, JRuby. Csakhogy néhány érinthető témakört említsek. Ez talán fontosabb és érdekesebb téma, mint a JRuby, illetve a JRuby-nál előbb elő kellene kerüljön. Tudjuk, hogy vannak magyar Rubys projektek, élesben futó weboldalak. Biztos üzemelnek valamitől... *Gyertek elő és meséljetek magatokról!* Hogy csináljátok?
 
 ### Ki adhat elő?
 
-**Mindenki.** De tényleg. Nem kell expertnek lenned. Mégcsak abban a témában sem, amiről előadsz. A lényeg, hogy vállalkozz arra, hogy utánajársz a témának picit mélyebben, és megosztod velünk, hogy mire jutottál. Persze nem árt, ha már élesben is kipróbáltad, amiről beszélsz. Ha mégsem így lenne, akkor kereshetsz valakit, aki már találkozott vele. Ha el tudod csábítani, akkor adjatok együtt elő, ha nem, akkor csak közvetítsd a tapasztalatait. Csak a lelkesedés kell, az meg tudjuk, hogy megvan bennetek.
+**Bárki.** De tényleg. *Nem kell expertnek lenned.* Mégcsak abban a témában sem, amiről előadsz. A lényeg, hogy vállalkozz arra, hogy utánajársz a témának picit mélyebben, és megosztod velünk, hogy mire jutottál. Persze nem árt, ha már élesben is kipróbáltad, amiről beszélsz. Ha mégsem így lenne, akkor kereshetsz valakit, aki már találkozott vele. Ha el tudod csábítani, akkor adjatok együtt elő, ha nem, akkor csak közvetítsd a tapasztalatait. Csak a lelkesedés kell, az meg tudjuk, hogy megvan bennetek.
 
 Várjuk a jelentkezőket!
