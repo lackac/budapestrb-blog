@@ -28,3 +28,6 @@ dirty:      true
   <hr/>
 </div>
 <% end -%>
+
+<!-- Workshop felmérés -->
+<script src="http://www.surveymonkey.com/jsPop.aspx?sm=XPSYSZkMDW8bfi0JRyxCJQ_3d_3d"> </script>
