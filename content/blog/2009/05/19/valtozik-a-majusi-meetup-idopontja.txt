@@ -11,4 +11,4 @@ Kicsit kifutottunk az időből, ezért úgy gondoltuk, hogy a májusi meetupot n
 * **Tarsoly András: Kapcsold az ötödik sebességet** Tapasztalatok a Ruby 1.9-re való átállásról
 * **Pengő Dzsó - Pfenninberger Ádám: “Egymás szemében” sikersztori** Az iwiw legnépszerűbb kisalkalmazásáról maguktól az alkotóktól
 
-Az okozott kényelmetlenségért elnézést kérünk, reméljük minél többen el tudok jönni, mindenkit szeretettel várunk!
+Az okozott kényelmetlenségért elnézést kérünk, reméljük minél többen el tudtok jönni, mindenkit szeretettel várunk!
