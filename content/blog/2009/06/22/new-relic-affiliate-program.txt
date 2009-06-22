@@ -29,7 +29,7 @@ Ezen túl a cég sok egyéb módon is támogatja a Ruby/Rails közösséget, ame
 
 Nagyjából egy hónapja *a budapest.rb belépett a New Relic affiliate programjába*. Ez két hasznos dolgot hoz magával. Egyrészt bárki, aki az affiliate kódunkkal regisztrál (például a fent látható logóra kattintva) az *hat hónap RPM előfizetés után kap egy hónapot ingyen*. Választhattuk volna azt is, hogy mi kapunk érte zöldhasúakat, de a non-profit jellegünket megtartva inkább titeket szeretnénk támogatni ezzel a lehetőséggel.
 
-A másik dolog, amit az affiliate program ad még az előzőnél is hasznosabb. A promó kódunk segítségével bárki ingyen kipróbálhatja az RPM fizetős feature-jeit. Egy ingyenes RPM account szükséges csak hozzá, és abba belépve az "Account" menüpont alatt a "Change Subscription" fülre menve lehet ezt a kódot beírni. Ez után egy hónapig ingyen kapjuk az RPM GOLD feature-öket.
+A másik dolog, amit az affiliate program ad még az előzőnél is hasznosabb. A promó kódunk segítségével bárki ingyen kipróbálhatja az RPM fizetős feature-jeit. Egy ingyenes RPM account szükséges csak hozzá, és abba belépve az "Account" menüpont alatt a "Change Subscription" fülre menve lehet ezt a kódot beírni. Ez után *egy hónapig ingyen kapjuk az RPM GOLD feature-öket*.
 
 Ezt érdemes jól kihasználni. Egy alkalmazás fejlesztése során akkor a legjobb bekapcsolni ezt a lehetőséget, amikor már működik tesztüzemben az oldal, és csak egy-két hét van hátra élesbe állításig. Ilyenkor az RPM segítségével meg lehet keresni a szűk keresztmetszeteket, és sokat lehet még optimalizálni. Élesbe állítás után pedig még mindig van néhány hét, hogy nagyobb terhelés alatt is meg lehessen vizsgálni az alkalmazás működését.
 
