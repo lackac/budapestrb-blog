@@ -24,7 +24,9 @@ Az előadások tehát:
 * Pár szó a RelaxDB-ről (ami egy Ruby library CouchDB-hez)
 * "In action": egy egyszerű példa alkalmazás
 
-## Hardi János : MongoDB
+## [Hardi János][2]: MongoDB
+
+[2]: http://domhackers.blogspot.com
 
 A MongoDB ötvözi a dokumentum alapú, kulcs-érték pár és RDBMS adatbáziskezelők előnyeit. Lightning talkjában Yaanno bemutatja hogyan teszi mindezt és milyen ruby-s megoldások vannak az illesztéshez.
 
