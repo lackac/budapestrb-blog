@@ -1,0 +1,45 @@
+---
+layout:    nil
+title:     budapest.rb Atom Feed
+subtitle:  Mindenféle hasznos dolgok a ruby meetupról.
+site:      ruby.meetup.hu
+author:    budapest.rb szervezők
+email:     ruby@meetup.hu
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ page.title }}</title>
+  <subtitle>{{ page.subtitle }}</subtitle>
+  <link href="http://{{ page.site }}//" rel="self" />
+  <link href="http://{{ page.site }}/" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ page.author }}</name>
+    <email>{{ page.email }}</email>
+  </author>
+  <id>http://{{ page.site }}/</id>
+  {% for post in site.posts limit:15 %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ post.url }}"/>
+    <id>tag:{{ page.site }},{{ post.created_at | date_to_xmlschema }}</id>
+    <updated>{% if post.updated_at %}{{ post.updated_at | date_to_xmlschema }}{% else %}{{ post.created_at | date_to_xmlschema }}{% endif %}</updated>
+    {% if post.author %}
+    <author>
+      <name>{{ post.author }}</name>
+      {% if post.author_uri %}
+      <uri>{{ post.author_uri }}</uri>
+      {% endif %}
+      {% if post.author_email %}
+      <email>{{ post.author_email }}</email>
+      {% endif %}
+    </author>
+    {% endif %}
+    <content type="html">
+      <![CDATA[
+      {{ post.content }}
+      ]]>
+    </content>
+  </entry>
+  {% endfor %}
+</feed>

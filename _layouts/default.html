@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu-hu">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }} - budapest.rb</title>
+  <meta name="author" content="Bácsi László, Golda Bence, Érdi Bálint" />
+
+  <!--- Blueprint CSS Framework -->
+  <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" charset="utf-8">
+  <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" charset="utf-8">
+
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" title="no title" charset="utf-8">
+
+  <link href="http://feeds.feedburner.com/budapestrb" rel="alternate" title="Legfrissebb bejegyzések" type="application/atom+xml" />
+</head>
+<body>
+
+<div class="container">
+
+  <div class="column span-20 first last" id="header">
+    <div class="column span-5">
+      <h1><a href="/" title="budapest.rb home page">budapest.rb</a></h1>
+    </div>
+    <div class="column span-15 last">
+      <h2>Magyar Ruby Meetup</h2>
+    </div>
+  </div>
+
+  <div class="column span-15 first" id="content">
+    <div class="inner">
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="column span-5 last" id="sidebar">
+    <div class="inner">
+      <div id="feed_sidebar">
+        <h4>ObjectSpace.each</h4>
+        <p class="large"><a href="http://feeds.feedburner.com/budapestrb"><img src="/images/feed.png" alt="atom feed" class="top"/>Feed</a></p>
+      </div>
+
+      <div id="news_sidebar">
+        <h4>posts.last(5)</h4>
+        <ul>
+          {% for post in site.posts limit:5 %}
+          <li><a href="{{post.url}}">{{post.title}}</a> <span class="date">({{ post.created_at | date: "%Y-%m-%d" }})</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div id="next_meetup_sidebar">
+        <embed  src="http://www.meetup.com/swf/membership_badge.swf?chapterid=1271139" width="166" height="110" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+      </div>
+
+      <div id="user_voice_sidebar">
+        {% include user_voice_top_ideas.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="column span-20 first last" id="footer">
+    <div class="inner">
+      A blog tartalma <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/hu/"><img alt="Creative Commons License" class="inline" src="http://i.creativecommons.org/l/by-nc-nd/2.5/hu/80x15.png"/></a> licenc feltételeinek megfelelően szabadon felhasználható.<br/>
+      Az oldal forrása ugyanezen licenc feltételei mellett felhasználható és elérhető <a href="http://github.com/lackac/budapestrb-blog/tree/gh-pages">a blog GitHub repójában</a>.
+    </div>
+  </div>
+
+</div>
+
+{% include comment_counter.html %}
+{% include user_voice_widget.html %}
+{% include analytics.html %}
+</body>
+</html>

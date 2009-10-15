@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<h1>
+  {{ page.title }}
+  <span class="meta">
+    {% if page.author %}
+    <span class="vcard">
+      by
+      {% if page.author_uri %}
+      <a href="{{page.author_uri}}" class="url fn">{{page.author}}</a>
+      {% else %}
+      <span class="fn">{{page.author}}</span>
+      {% endif %}
+    </span>
+    {% endif %}
+    <span class="date">{{ page.created_at | date: "%Y-%m-%d %H:%M" }}</span>{% unless page.no_comment %}, <a href="http://ruby.meetup.hu{{page.url}}#disqus_thread" class="comments">kommentek</a>{% endunless %}
+  </span>
+</h1>
+
+{{ content }}
+
+{% unless page.no_comment %}
+  {% include comment_thread.html %}
+{% endunless %}
