@@ -6,6 +6,14 @@ Ez a budapest.rb blog forrása. A statikus oldal ebből automatikusan készül e
 
 További információk: [GitHub Pages](http://pages.github.com/), [Liquid segédlet](http://wiki.github.com/tobi/liquid/liquid-for-designers)
 
+## Tippek
+
+Új blogbejegyzés generálása:
+
+    $ rake post["Új blogbejegyzés"]
+
+## Licenc
+
 A blog tartalma és forrása a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/hu/"><img alt="Creative Commons License" class="inline" src="http://i.creativecommons.org/l/by-nc-nd/2.5/hu/80x15.png"/></a> licenc feltételeinek megfelelően szabadon felhasználható.
 
 # In English
