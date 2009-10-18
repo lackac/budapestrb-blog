@@ -1,4 +1,4 @@
-markdown: maruku
+markdown: rdiscount
 permalink: /blog/:year/:month/:day/:title.html
 paginate: 10
 pygments: true
