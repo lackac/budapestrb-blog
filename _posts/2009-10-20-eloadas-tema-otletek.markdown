@@ -5,7 +5,7 @@ layout: post
 author: "B\xC3\xA1lint"
 author_uri: http://www.bucionrails.com
 ---
-[Egyre nagyobb díjazásban részesítjük azt][1], aki nagyelőadásra vállalkozik a budapest.rb-n. Mivel biztos vagyok benne, hogy mindannyiótokban pezseg az előadói vér, csak nem találtok témát, összeállítottam egy listát a születésnapi alkalom előtti rövid felmérés, valamint az állandóan futó [vox populi] alapján. Egyrészről azt mértük, hogy miről szeretnétek hallani a budapest.rb keretében másrészt azt, hogy mely előadások tetszettek leginkább. 
+[Egyre nagyobb díjazásban részesítjük azt][1], aki nagyelőadásra vállalkozik a budapest.rb-n. Mivel biztos vagyok benne, hogy mindannyiótokban pezseg az előadói vér, csak nem találtok témát, összeállítottam egy listát a születésnapi alkalom előtti rövid felmérés, valamint az állandóan futó [vox populi][2] alapján. Egyrészről azt mértük, hogy miről szeretnétek hallani a budapest.rb keretében másrészt azt, hogy mely előadások tetszettek leginkább. 
 
 Az alábbi lista korántsem teljeskörű, tehát ha valaki más témában szeretne előadni, rajta!
 
