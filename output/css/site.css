@@ -1,0 +1,113 @@
+
+body {
+  font-family: Georgia, serif;
+  background: #eee;
+}
+
+/* Headings
+ * --------------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6 { color: #111; border-bottom: 1px solid #bbb; }
+
+/* Text Elements
+ * --------------------------------------------------------------------- */
+a                 { color: #125AA7; }
+a:hover           { color: #000; }
+blockquote        { color: #666; }
+
+pre {
+  background: #eee;
+  border:     1px solid #bbb;
+}
+
+hr {
+  background: #B2CCFF;
+  color:      #B2CCFF;
+}
+
+/* Tables
+ * --------------------------------------------------------------------- */
+table {
+  border-top:     1px solid #bbb;
+  border-left:    1px solid #bbb;
+}
+th,td {
+  border-bottom:  1px solid #bbb;
+  border-right:   1px solid #bbb;
+}
+
+/* Default Classes
+ * --------------------------------------------------------------------- */
+div.container { width: 790px; }
+p.quiet { color: #666; }
+.alt    { color: #666; }
+
+div.body {
+  margin-bottom: 2em;
+}
+
+img.inline {
+  float: none;
+  margin: 0;
+  border: 0;
+}
+
+h1 span.meta {
+  float: right;
+  margin-top: 1px;
+  font-size: 0.33em;
+  font-weight: normal;
+  color: #666;
+}
+h1 a {
+  text-decoration: none;
+}
+.article span.date {
+  font-size: 50%; margin-left: 1em;
+}
+h1 span.meta span.date {
+  font-size: 100%; margin-left: 0;
+}
+
+.embed {
+  text-align: center;
+}
+.embed- object {
+  margin: 0 auto;
+  text-align: left;
+}
+
+#header h1 {
+  background: transparent url(/images/logo.gif) bottom left no-repeat;
+  border-bottom-width: 0;
+  width: 162px;
+  height: 108px;
+}
+#header h1 a {
+  display: block;
+  text-indent: -5000px;
+  width: 162px;
+  height: 108px;
+}
+#header h2 {
+  margin-top: 36px;
+  border-bottom-width: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#content div.inner {
+  background: #fff;
+  border: 1px solid #bbb;
+  padding: 1em;
+}
+#sidebar div.inner {
+  padding: 1em;
+}
+
+#footer div.inner {
+  margin-top: 1.5em;
+  border-top: 1px solid #bbb;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* EOF */
