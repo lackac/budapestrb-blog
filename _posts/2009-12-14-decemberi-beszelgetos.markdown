@@ -1,8 +1,8 @@
 --- 
-title: decemberi-beszelgetos
+title: "Decemberi beszélgetős"
 created_at: 2009-12-14 21:46:49.722023 +01:00
 layout: post
-author: "B\xC3\xA1lint"
+author: "Bálint"
 author_uri: http://www.bucionrails.com
 ---
 Már-már hagyomány (hiszen ez a mostani a második alkalom :)) a budapest.rb történetében, hogy a decemberi meetup-ot az ünnepek előtti őrületre való tekintettel lazára vesszük, és előadások nélkül, egy vendéglátóipari egységben, beszélgetésre jövünk össze. 
