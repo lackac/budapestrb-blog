@@ -17,4 +17,6 @@ GTK2/Cairo, a Chipmunk és a Gosu keretrendszerek segítségével.
 
 Ezen kívül számíthattok még pár villámelőadásra is. Vagy akár készülhettek is ilyennel, van még hely. Akik az előadások után még tudnak maradni, azokkal meetup után pedig szokásos módon átmegyünk az Iguanaba oldottabb légkörben tovább beszélgetni egyet. *Aki ehhez a részhez is csatlakozna, az kommenteljen a bejegyzéshez*, hogy az alapján foglaljunk asztalt.
 
+[RSVP](http://www.meetup.com/budapest-rb/calendar/12104512/)
+
 Még egy dolog: aki eljön meetupra, az választhat a könyvtárunk könyvei közül valami olvasnivalót magának következő hónapra. Mivel a könyvek csak egy hónapig lehetnek nálatok, ezért én is fájó szívvel visszaviszem a *Passionate Programmer* c. könyvet, így annak kikölcsönzésére is van mód. Még nincs semmilyen rendszer a kölcsönzések követésére, így majd írunk róla valami papírt, amit alá kell írnotok, ha könyvet akartok elvinni. Aztán majd jól csinálunk erre is valamit.
