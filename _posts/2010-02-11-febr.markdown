@@ -1,0 +1,15 @@
+--- 
+title: febr
+created_at: 2010-02-11 11:34:33.243802 +01:00
+layout: post
+author: "B\xC3\xA1lint"
+author_uri: http://www.codigoergosum.com
+---
+Repül az idő, pont egy hét múlva este már a CoLabs meghitt nagytermében fogunk érdekes előadásokat nézni. Hogy kiket/miket is?
+
+A nagyelőadónk [Frivolt György][fifigyuri] lesz, aki a Ruby objektum modelljéről fog beszélni. Az utánakövetkező villámelőadásokra pedig várunk jelentkezőket a <ruby@meetup.hu> címen. Utána pedig Iguana, ha jöttök, jelezzétek itt a kommentekben, hogy tudjam, hány főre foglaljak asztalt!
+
+Még [mindig kalapozunk két célra][tamogass]: a meetup.com accountunk fenntartására és egy jó minőségű mikrofon beszerzésére ami jelentősen javítaná a videók élvezhetőségét. Az eddigi adományozóknak köszönjük, még mintegy 100 Euróra lenne szükségünk. Tudjátok, a közösségért tenni akarás fontossága, meg ilyesmi.
+
+[fifigyuri]: http://twitter.com/fifigyuri
+[tamogass]: http://ruby.meetup.hu/blog/2010/02/03/januari-videok-es-felhivas.html
