@@ -18,7 +18,7 @@ AUTHORS = {
   },
   "balint" => {
     'author'     => 'Bálint',
-    'author_uri' => "http://www.bucionrails.com"
+    'author_uri' => "http://www.codigoergosum.com"
   },
 }
 
