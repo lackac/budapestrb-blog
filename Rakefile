@@ -5,7 +5,7 @@ begin
 rescue LoadError
   YAML_METHOD = :to_yaml
 end
-require 'activesupport'
+require 'active_support'
 
 AUTHORS = {
   "lackac" => {
