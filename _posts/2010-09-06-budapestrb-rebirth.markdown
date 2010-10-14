@@ -1,7 +1,7 @@
 ---
 created_at: 2010-09-06 23:41:12.988605 +02:00
 layout: post
-title: [Update #2] budapest.rb Rebirth
+title: budapest.rb Rebirth
 author: LacKac
 author_uri: http://lackac.hu
 ---
