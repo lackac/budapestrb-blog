@@ -33,3 +33,5 @@ kölcsönözni.
 
 Meetup után pedig bátorítunk mindenkit, hogy csatlakozzon hozzánk
 valamelyik közeli vendéglátó helyiségben a további beszélgetésre.
+
+[RSVP](http://www.meetup.com/budapest-rb/calendar/14764973/)
