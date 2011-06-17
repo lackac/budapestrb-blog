@@ -20,6 +20,10 @@ AUTHORS = {
     'author'     => 'Bálint',
     'author_uri' => "http://www.codigoergosum.com"
   },
+  "tompata" => {
+    'author'     => 'Tamás',
+    'author_uri' => "http://www.digitalnatives.hu"
+  }
 }
 
 desc "Generate new blog post"
